@@ -37,7 +37,7 @@ router.get('/', function (req, res) {
   });
 });
 
-// GETS A SINGLE USER FROM THE DATABASE
+// GETS A SINGLE USER FROM THE DATABASE（req.params）
 router.get('/:id', function (req, res) {
   User.findById(req.params.id, function (err, user) {
     if (err) return res.status(500).send("There was a problem finding the user.");
